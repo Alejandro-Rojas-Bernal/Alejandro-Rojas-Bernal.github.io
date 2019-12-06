@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<HTML lang = "en">
+<HEAD>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  
+  
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  
+<style>
+pre.hljl {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 5px;
+    overflow-x: auto;
+    color: rgb(68,68,68); background-color: rgb(251,251,251); }
+pre.hljl > span.hljl-t { }
+pre.hljl > span.hljl-w { }
+pre.hljl > span.hljl-e { }
+pre.hljl > span.hljl-eB { }
+pre.hljl > span.hljl-o { }
+pre.hljl > span.hljl-k { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kc { color: rgb(59,151,46); font-style: italic; }
+pre.hljl > span.hljl-kd { color: rgb(214,102,97); font-style: italic; }
+pre.hljl > span.hljl-kn { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kp { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kr { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-kt { color: rgb(148,91,176); font-weight: bold; }
+pre.hljl > span.hljl-n { }
+pre.hljl > span.hljl-na { }
+pre.hljl > span.hljl-nb { }
+pre.hljl > span.hljl-nbp { }
+pre.hljl > span.hljl-nc { }
+pre.hljl > span.hljl-ncB { }
+pre.hljl > span.hljl-nd { color: rgb(214,102,97); }
+pre.hljl > span.hljl-ne { }
+pre.hljl > span.hljl-neB { }
+pre.hljl > span.hljl-nf { color: rgb(66,102,213); }
+pre.hljl > span.hljl-nfm { color: rgb(66,102,213); }
+pre.hljl > span.hljl-np { }
+pre.hljl > span.hljl-nl { }
+pre.hljl > span.hljl-nn { }
+pre.hljl > span.hljl-no { }
+pre.hljl > span.hljl-nt { }
+pre.hljl > span.hljl-nv { }
+pre.hljl > span.hljl-nvc { }
+pre.hljl > span.hljl-nvg { }
+pre.hljl > span.hljl-nvi { }
+pre.hljl > span.hljl-nvm { }
+pre.hljl > span.hljl-l { }
+pre.hljl > span.hljl-ld { color: rgb(148,91,176); font-style: italic; }
+pre.hljl > span.hljl-s { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sa { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sb { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sc { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sd { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sdC { color: rgb(201,61,57); }
+pre.hljl > span.hljl-se { color: rgb(59,151,46); }
+pre.hljl > span.hljl-sh { color: rgb(201,61,57); }
+pre.hljl > span.hljl-si { }
+pre.hljl > span.hljl-so { color: rgb(201,61,57); }
+pre.hljl > span.hljl-sr { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ss { color: rgb(201,61,57); }
+pre.hljl > span.hljl-ssB { color: rgb(201,61,57); }
+pre.hljl > span.hljl-nB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nbB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nfB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nh { color: rgb(59,151,46); }
+pre.hljl > span.hljl-ni { color: rgb(59,151,46); }
+pre.hljl > span.hljl-nil { color: rgb(59,151,46); }
+pre.hljl > span.hljl-noB { color: rgb(59,151,46); }
+pre.hljl > span.hljl-oB { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-ow { color: rgb(102,102,102); font-weight: bold; }
+pre.hljl > span.hljl-p { }
+pre.hljl > span.hljl-c { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-ch { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cm { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cp { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cpB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-cs { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-csB { color: rgb(153,153,119); font-style: italic; }
+pre.hljl > span.hljl-g { }
+pre.hljl > span.hljl-gd { }
+pre.hljl > span.hljl-ge { }
+pre.hljl > span.hljl-geB { }
+pre.hljl > span.hljl-gh { }
+pre.hljl > span.hljl-gi { }
+pre.hljl > span.hljl-go { }
+pre.hljl > span.hljl-gp { }
+pre.hljl > span.hljl-gs { }
+pre.hljl > span.hljl-gsB { }
+pre.hljl > span.hljl-gt { }
+</style>
+
+
+
+  <style type="text/css">
+  @font-face {
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+}
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  font-family: monospace, monospace;
+  font-size : 0.8em;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+thead th {
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+tr:nth-child(odd){
+  background-color: rgb(248,248,248);
+}
+
+
+/*
+* Skeleton V2.0.4
+* Copyright 2014, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 12/29/2014
+*/
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box; }
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+@media (min-width: 550px) {
+  .container {
+    width: 80%; }
+  .column,
+  .columns {
+    margin-left: 4%; }
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0; }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+html {
+  font-size: 62.5%; }
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+h1 { font-size: 3.6rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.4rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.2rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.8rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 2.4rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+p {
+  margin-top: 0; }
+a {
+  color: #1EAEDB; }
+a:hover {
+  color: #0FA0CE; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+ul {
+  list-style: circle; }
+ol {
+  list-style: decimal; }
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%; }
+li > p {margin : 0;}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+button,
+.button {
+  margin-bottom: 1rem; }
+input,
+textarea,
+select,
+fieldset {
+  margin-bottom: 1.5rem; }
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol,
+form {
+  margin-bottom: 1.0rem; }
+.u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+.u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+.u-pull-right {
+  float: right; }
+.u-pull-left {
+  float: left; }
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+pre.hljl {
+  margin: 0 0 10px;
+  display: block;
+  background: #f5f5f5;
+  border-radius: 4px;
+  padding : 5px;
+}
+
+pre.output {
+  background: #ffffff;
+}
+
+pre.code {
+  background: #ffffff;
+}
+
+pre.julia-error {
+  color : red
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 13px;
+}
+
+
+@media (min-width: 400px) {}
+@media (min-width: 550px) {}
+@media (min-width: 750px) {}
+@media (min-width: 1000px) {}
+@media (min-width: 1200px) {}
+
+h1.title {margin-top : 20px}
+img {max-width : 100%}
+div.title {text-align: center;}
+
+  </style>
+
+
+
+</HEAD>
+  <BODY>
+    <div class ="container">
+      <div class = "row">
+        <div class = "col-md-12 twelve columns">
+
+          <div class="title">
+            
+            
+            
+          </div>
+
+          <h1>Problem Set 7</h1>
+<h1>Student: Alejandro Rojas</h1>
+<h1>Code and Program Set Up</h1>
+<h1>Question 5: Subvector Inference</h1>
+<p>Add identification robust inference methods for subsets of the parameters.</p>
+<p>The current tests are all only for hypotheses involving the entire vector of parameters.</p>
+<p>Guggenberger &amp; Smith &#40;2005&#41; have some results for GEL and subvector inference.</p>
+<h2>Intuition</h2>
+<p>Starting with the model <span class="math">$u_{ij} = x_j \theta + \xi_j + \epsilon_{ij}$</span> where <span class="math">$x_j$</span> are observed variables, <span class="math">$xi_j$</span> are latent variables, and <span class="math">$\epsilon_{ij}$</span> are ideosyncratic shocks in preferences about the option <span class="math">$j$</span> we have that the percentage of individuals that choose <span class="math">$j$</span> are: <span class="math">$y_j = F_{-\epsilon}\left(x_j \theta + \xi_j\right)$</span> where <span class="math">$F_{-\epsilon}$</span> is the CDF of <span class="math">$-\epsilon$</span>.</p>
+<p>In the model we assume that <span class="math">$\epsilon_{ij}$</span> is independent of <span class="math">$x_j$</span> and <span class="math">$\xi_j$</span>. But we allow <span class="math">$x_j$</span> to be correlated with <span class="math">$\xi_j$</span>. Let&#39;s assume that we have an instrument that satisfies <span class="math">$E\left[\xi_j z_j\right]=0$</span>. Therefore, the moment condition in terms of observables and <span class="math">$\theta$</span> is given by: <span class="math">$g(x_j, z_j, \theta) = E\left[\left(F_{-\epsilon}^{-1}\left(y_j\right)-x_j\theta\right)z_j\right].$</span></p>
+<p>The problem of subvector inference that we are going to solve imposes a constrain in <span class="math">$\theta^*=\left[\alpha, \beta\right]$</span> such that <span class="math">$\alpha = \alpha_0$</span>. This means that the constraint GMM problem that we are going to solve is: <span class="math">$\hat{\beta}\left(\alpha_0\right)=\underset{\beta \in B}{arg max} \hat{Q}_n \left(\theta^*\right)$</span> where  <span class="math">$\hat{Q}_n \left(\theta\right) =\left(\frac{1}{n}\sum_{i=1}^{n}g(x_j, z_j, \theta^*)\right)'\hat{W}\left(\frac{1}{n}\sum_{i=1}^{n}g(x_j, z_j, \theta^*)\right)$</span> and we are going to make inference about the subvector <span class="math">$\beta\left(\alpha_0\right)$</span>.</p>
+<h2>Solution</h2>
+<pre><code class="language-&#123;.julia&#125;">using ForwardDiff, LinearAlgebra, Distributions, Plots, LaTeXStrings, Optim
+~~~~~~~~~~~~~
+
+
+
+
+### Step 1. Data Simulation for IV Logit
+
+
+The function &#96;simulate_ivshare&#96; simulates the model that we previously presented
+</code></pre>
+<p>&#123;.julia&#125; function simulate_ivshare&#40;n,β,γ,ρ&#41;     # We generate random IV     z &#61; randn&#40;n, size&#40;γ&#41;&#91;1&#93;&#41;     # Random component of the auxiliary regression     endo &#61; randn&#40;n, length&#40;β&#41;&#41;     # Auxiliary Regression     x &#61; z<em>γ .&#43; endo     # xi element of regression is explained by a random component and is correlated with the error of the auxiliary regression     ξ &#61; rand&#40;Normal&#40;0, sqrt&#40;1.0-ρ^2&#41;&#41;,n&#41; .&#43; endo&#91;:,1&#93;</em>ρ     y &#61;cdf.&#40;Logistic&#40;&#41;, x * β .&#43; ξ&#41;     return&#40;&#40;y&#61;y,x&#61;x,z&#61;z&#41;&#41; end</p>
+<pre><code>
+
+~~~~
+simulate_ivshare &#40;generic function with 1 method&#41;
+~~~~
+
+
+
+
+For &#36;\theta &#61; &#91;1 , 1 , 1, 1&#93;&#39;&#36; and an instrumental variable matrix of dimension &#36;6&#36; we simulate the process for &#36;n &#61; 100&#36;
+
+~~~~&#123;.julia&#125;
+n &#61; 500
+k &#61; 4
+iv &#61; 6
+β0 &#61; ones&#40;k&#41;
+# π0 is the population vector for the γ parameters
+π0 &#61; vcat&#40;5*I, ones&#40;iv-k,k&#41;&#41;
+ρ &#61; 0.5
+&#40;y,x,z&#41; &#61; simulate_ivshare&#40;n,β0,π0,ρ&#41;;</code></pre>
+<h3>Step 2. Functions that are used in the estimation</h3>
+<p><code>gi_ivshare</code> estimates the moment condition for a particular data and parameters <span class="math">$\theta$</span></p>
+<pre><code class="language-&#123;.julia&#125;">function gi_ivshare&#40;β,y,x,z&#41;
+    ξ &#61; quantile.&#40;Logistic&#40;&#41;,y&#41; .- x*β
+    ξ.*z
+end
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>gi_ivshare &#40;generic function with 1 method&#41;</p>
+<pre><code>
+
+
+
+&#96;ordering&#96; takes a set of unconstrained parameters &#36;\psi&#36; &#40;the &#36;\beta&#36;&#39;s to estimate&#41;, a set of constrained parameters &#36;\alpha&#36;, and an indicator matrix &#36;Ind&#36; that signals the place in &#36;\theta&#36; of the elements in &#36;\alpha&#36; on orders them in the same way that &#36;\theta&#36;
+</code></pre>
+<p>&#123;.julia&#125; function ordering&#40;ψ,Ind,α&#41;     @assert sum&#40;Ind&#41; &#61;&#61; length&#40;α&#41;     count<em>ψ &#61; 0;     count</em>α &#61; 0;     count<em>θ &#61; 0;     θ &#61; similar&#40;ψ, length&#40;Ind&#41;&#41;;     for i in 1:length&#40;Ind&#41;         count</em>θ &#43;&#61; 1         if Ind&#91;i&#93; &#61;&#61; 1             count<em>α &#43;&#61; 1             θ&#91;count</em>θ&#93; &#61; α&#91;count<em>α&#93;         elseif Ind&#91;i&#93; &#61;&#61; 0             count</em>ψ &#43;&#61; 1             θ&#91;count<em>θ&#93; &#61; ψ&#91;count</em>ψ&#93;         end     end     return θ end</p>
+<pre><code>
+
+~~~~
+ordering &#40;generic function with 1 method&#41;
+~~~~
+
+
+
+
+&#96;gmmObjsub&#96; establishes the GMM objective function for a set of unconstrained parameters &#36;\psi&#36;, a set of constrained parameters &#36;\alpha&#36;, the indicator matrix of constrains &#36;Ind&#36;, a weight matrix &#36;W&#36;, and a moment condition function &#36;&#36;
+
+~~~~&#123;.julia&#125;
+function gmmObjsubvec&#40;ψ,gi,W,Ind,α&#41;
+    θ &#61; ordering&#40;ψ,Ind,α&#41;
+    g &#61; gi&#40;θ&#41;
+    m &#61; mean&#40;g, dims&#61;1&#41;
+    return &#40;size&#40;g&#41;&#91;1&#93;*&#40; m*W*m&#39;&#41;&#91;1&#93;&#41;
+end</code></pre>
+<pre><code>gmmObjsubvec &#40;generic function with 1 method&#41;</code></pre>
+<p><code>gmmVar</code> estimates the variance of the parameters <span class="math">$\theta$</span> for a weight matrix <span class="math">$W$</span> and a moment condition function <span class="math">$gi$</span></p>
+<pre><code class="language-&#123;.julia&#125;">function gmmVar&#40;θ,gi,W&#41;
+    g &#61; gi&#40;θ&#41;
+    n &#61; size&#40;g&#41;&#91;1&#93;
+    D &#61; ForwardDiff.jacobian&#40;θ -&gt; mean&#40;gi&#40;θ&#41;,dims&#61;1&#41;,θ&#41;
+    Σ &#61; cov&#40;gi&#40;θ&#41;&#41;
+    1/n*inv&#40;D&#39;*W*D&#41;*&#40;D&#39;*W*Σ*W*D&#41;*inv&#40;D&#39;*W*D&#41;
+end
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>gmmVar &#40;generic function with 1 method&#41;</p>
+<pre><code>
+
+
+
+&#96;ar&#96; estimates the Anderson-Rubin test for a set of unconstrained parameters &#36;\psi&#36;, a set of constrained parameters &#36;\alpha&#36;, the indicator matrix of constrains &#36;Ind&#36;, and a moment condition function &#36;gi&#36;
+</code></pre>
+<p>&#123;.julia&#125; function ar&#40;ψ,gi,Ind,α&#41;     θ &#61; ordering&#40;ψ,Ind,α&#41;     gmmObjsubvec&#40;ψ, gi, inv&#40;cov&#40;gi&#40;θ&#41;&#41;&#41;, Ind,α&#41; end</p>
+<pre><code>
+
+~~~~
+ar &#40;generic function with 1 method&#41;
+~~~~
+
+
+
+
+### Step 3. Constrains in &#36;\alpha_0&#36;
+
+
+The matrix &#36;\psi&#36; sets the initial values of &#36;\beta_0&#36; that will be used for the estimation of &#36;\hat&#123;\beta&#125;&#40;\alpha_0&#41;&#36;. The matrix &#36;\alpha&#61;\alpha_0&#36;. The matrix &#36;Ind&#36; indicates the position of the constraints, e.g. if &#36;Ind&#61;&#91;0, 1, 1, 1&#93;&#36; then &#36;\theta&#91;1&#93; &#61; \psi&#91;1&#93;&#36;, &#36;\theta&#91;2&#93; &#61; \alpha&#91;1&#93;&#36;, &#36;\theta&#91;3&#93; &#61; \alpha&#91;2&#93;&#36;, and &#36;\theta&#91;4&#93; &#61; \psi&#91;2&#93;&#36;.
+
+~~~~&#123;.julia&#125;
+ψ &#61; &#91;0.0,0.0&#93;
+α &#61; &#91;1.0,1.0&#93;
+Ind &#61; &#91;0 1 1 0&#93;</code></pre>
+<pre><code>1×4 Array&#123;Int64,2&#125;:
+ 0  1  1  0</code></pre>
+<p>We do a first estimation with <span class="math">$W=I$</span></p>
+<pre><code class="language-&#123;.julia&#125;">opt1 &#61; optimize&#40;λ -&gt; gmmObjsubvec&#40;λ, β-&gt;gi_ivshare&#40;β,y,x,z&#41;,I,Ind,α&#41;,
+                ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41;
+@show β1 &#61; opt1.minimizer
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>β1 &#61; opt1.minimizer &#61; &#91;0.9909760049813034, 0.9999140351133722&#93;</p>
+<pre><code>
+
+</code></pre>
+<p>&#123;.julia&#125; θ1 &#61; ordering&#40;β1,Ind,α&#41; display&#40;gmmVar&#40;θ1,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,I&#41;&#41;</p>
+<pre><code>
+
+~~~~
+4×4 Array&#123;Float64,2&#125;:
+  6.81727e-5  -3.19971e-6  -9.00497e-6  -1.18568e-5
+ -3.19971e-6   6.06132e-5  -3.06e-6     -1.70909e-6
+ -9.00497e-6  -3.06e-6      6.58139e-5  -1.39712e-5
+ -1.18568e-5  -1.70909e-6  -1.39712e-5   6.89187e-5
+~~~~
+
+
+
+
+We do a second estimation with the efficient &#36;W&#36; that uses as input the previous estimation
+
+~~~~&#123;.julia&#125;
+opteff &#61; optimize&#40;λ -&gt; gmmObjsubvec&#40;λ, β-&gt;gi_ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi_ivshare&#40;θ1,y,x,z&#41;&#41;&#41;,Ind,α&#41;,
+                  ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41;
+@show βeff &#61; opteff.minimizer</code></pre>
+<pre><code>βeff &#61; opteff.minimizer &#61; &#91;0.989366885893275, 1.0000471213427558&#93;</code></pre>
+<pre><code class="language-&#123;.julia&#125;">θeff &#61; ordering&#40;βeff,Ind,α&#41;
+display&#40;gmmVar&#40;θeff,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi_ivshare&#40;θ1,y,x,z&#41;&#41;&#41;&#41;&#41;
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>4×4 Array&#123;Float64,2&#125;:   6.69045e-5  -3.49907e-6  -9.70254e-6  -1.14941e-5  -3.49907e-6   6.06875e-5  -3.18242e-6  -1.57e-6     -9.70254e-6  -3.18242e-6   6.5473e-5   -1.37483e-5  -1.14941e-5  -1.57e-6     -1.37483e-5   6.87587e-5</p>
+<pre><code>
+
+
+
+Finally we estimate the continous updating estimator by solving the AR function
+</code></pre>
+<p>&#123;.julia&#125; ar<em>ivshare &#61; θ-&gt;ar&#40;θ,β-&gt;gi</em>ivshare&#40;β,y,x,z&#41;,Ind,α&#41; optcue &#61; optimize&#40;ar_ivshare,                   ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41; @show βcue &#61; optcue.minimizer</p>
+<pre><code>
+
+~~~~
+βcue &#61; optcue.minimizer &#61; &#91;0.9892992335492058, 1.0000145209568787&#93;
+~~~~
+
+
+
+~~~~&#123;.julia&#125;
+θcue &#61; ordering&#40;βcue,Ind,α&#41;
+Vcue &#61; gmmVar&#40;θcue,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi_ivshare&#40;θcue,y,x,z&#41;&#41;&#41;&#41;
+display&#40;Vcue&#41;</code></pre>
+<pre><code>4×4 Array&#123;Float64,2&#125;:
+  6.69014e-5  -3.49833e-6  -9.70718e-6  -1.14961e-5
+ -3.49833e-6   6.0692e-5   -3.1828e-6   -1.56857e-6
+ -9.70718e-6  -3.1828e-6    6.5483e-5   -1.37561e-5
+ -1.14961e-5  -1.56857e-6  -1.37561e-5   6.87607e-5</code></pre>
+<p>Finally we create a function <code>plot_cr</code> that establishes confidence intervals with Anderson-Rubin test and the Wald statistic</p>
+<pre><code class="language-&#123;.julia&#125;">Plots.gr&#40;&#41;
+function plot_cr&#40;β,θ,V, AR, Ind, α&#41;
+    #Extract relevant submatrix of V
+    Vsub &#61; fill&#40;0.0, sum&#40;Ind&#41;, sum&#40;Ind&#41;&#41;
+    count_row &#61; 0
+    for i ∈ 1:length&#40;Ind&#41;
+        if Ind&#91;i&#93; &#61;&#61; 1
+            count_row &#43;&#61; 1
+            count_col &#61; 0
+            for j ∈ 1:length&#40;Ind&#41;
+                if Ind&#91;j&#93; &#61;&#61; 1
+                    count_col &#43;&#61; 1
+                    Vsub&#91;count_row,count_col&#93; &#61; V&#91;i,j&#93;
+                end
+            end
+        end
+    end
+    @assert Vsub ≈ transpose&#40;Vsub&#41;
+    lb &#61; β - sqrt.&#40;diag&#40;Vsub&#41;&#41;*5
+    ub &#61; β &#43; sqrt.&#40;diag&#40;Vsub&#41;&#41;*5
+    ntest &#61; 1000
+    βtest &#61; &#91;rand&#40;length&#40;β&#41;&#41;.*&#40;ub-lb&#41; .&#43; lb for i in 1:ntest&#93;
+    arstat &#61; &#91;AR&#40;ordering&#40;βtest&#91;i&#93;,Ind,α&#41;&#41; for i in 1:ntest&#93;
+    βtest &#61; vcat&#40;βtest&#39;...&#41;
+    crit &#61; quantile&#40;Chisq&#40;size&#40;z&#41;&#91;2&#93;&#41;, 0.9&#41;
+    ψ0 &#61; fill&#40;0.0, length&#40;β&#41;&#41;
+    count_ψ0 &#61; 0
+    for i ∈ 1:length&#40;Ind&#41;
+        if Ind&#91;i&#93; &#61;&#61; 1
+            count_ψ0 &#43;&#61; 1
+            ψ0&#91;count_ψ0&#93; &#61; β0&#91;i&#93;
+        end
+    end
+    b1 &#61; lb&#91;1&#93;:&#40;ub&#91;1&#93;-lb&#91;1&#93;&#41;/100:ub&#91;1&#93;
+    b2 &#61; lb&#91;2&#93;:&#40;ub&#91;2&#93;-lb&#91;2&#93;&#41;/100:ub&#91;2&#93;
+    arf &#61; &#40;a,b&#41; -&gt; cdf&#40;Chisq&#40;size&#40;z&#41;&#91;2&#93;&#41;,AR&#40;ordering&#40;&#91;a;b&#93;,Ind,α&#41;&#41;&#41;
+    scatter&#40;βtest&#91;:,1&#93;,βtest&#91;:,2&#93;, group&#61;&#40;arstat.&lt;crit&#41;, legend&#61;false,
+            markersize&#61;4, markerstrokewidth&#61;0.0, seriesalpha&#61;0.8,
+            xlabel&#61;&quot;beta_1&quot;, ylabel&#61;&quot;beta_2&quot;&#41;
+    scatter&#33;&#40;&#91;ψ0&#91;1&#93;&#93;, &#91;ψ0&#91;2&#93;&#93;, markersize&#61;8&#41;
+    b1 &#61; lb&#91;1&#93;:&#40;ub&#91;1&#93;-lb&#91;1&#93;&#41;/100:ub&#91;1&#93;
+    b2 &#61; lb&#91;2&#93;:&#40;ub&#91;2&#93;-lb&#91;2&#93;&#41;/100:ub&#91;2&#93;
+    arf &#61; &#40;a,b&#41; -&gt; cdf&#40;Chisq&#40;size&#40;z&#41;&#91;2&#93;&#41;,AR&#40;ordering&#40;&#91;a;b&#93;,Ind,α&#41;&#41;&#41;
+    contour&#33;&#40;b1,b2,arf, levels &#61; &#91;0.9, 0.95&#93;, contour_labels&#61;false, legend&#61;false, label&#61;&quot;AR CI&quot;, c&#61;cgrad&#40;&#91;:black,:black&#93;,&#91;0.0,1.0&#93;&#41;&#41;
+    waldf &#61; &#40;a,b&#41; -&gt; cdf&#40;Chisq&#40;length&#40;βcue&#41;&#41;,&#40;&#91;a,b&#93;-βcue&#41;&#39;*inv&#40;Vsub&#41;*&#40;&#91;a,b&#93;-βcue&#41;&#41;
+    contour&#33;&#40;b1,b2,waldf, levels &#61; &#91;0.9, 0.95&#93;,          contour_labels&#61;false, label&#61;&quot;Wald CI&quot;, c&#61;cgrad&#40;&#91;:red,:red&#93;, &#91;0.0,1.0&#93;&#41;, legend&#61;false&#41;
+
+end
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>plot_cr &#40;generic function with 1 method&#41;</p>
+<pre><code>
+
+</code></pre>
+<p>&#123;.julia&#125; plot<em>cr&#40;βcue, θcue,Vcue, ar</em>ivshare, Ind, α&#41;</p>
+<pre><code>
+
+&#33;&#91;&#93;&#40;figures/Problem Set 7 -  Alejandro Rojas &#40;1&#41;_14_1.png&#41;\ 
+
+
+
+The red line represent the &#36;90\&#37;&#36; and the &#36;95\&#37;&#36; confidence interval for the Wald statistic. The black lines represent the &#36;90\&#37;&#36; and the &#36;95\&#37;&#36; confidence interval for the Anderson-Rubin statistic
+
+
+### Step 4. Inadequate constraints in &#36;\alpha_0&#36;
+
+
+Previously we assumed the population correct values of &#36;\alpha_0&#36;. Now we are going to see what happens if we impose a sligh deviation around it:
+
+~~~~&#123;.julia&#125;
+ψ &#61; &#91;0.0,0.0&#93;
+α &#61; &#91;1.2,1.0&#93;
+Ind &#61; &#91;0 1 1 0&#93;
+
+opt1 &#61; optimize&#40;λ -&gt; gmmObjsubvec&#40;λ, β-&gt;gi_ivshare&#40;β,y,x,z&#41;,I,Ind,α&#41;,
+                ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41;
+@show β1 &#61; opt1.minimizer</code></pre>
+<pre><code>β1 &#61; opt1.minimizer &#61; &#91;0.9711444164411583, 0.9970558512274159&#93;</code></pre>
+<pre><code class="language-&#123;.julia&#125;">θ1 &#61; ordering&#40;β1,Ind,α&#41;
+display&#40;gmmVar&#40;θ1,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,I&#41;&#41;
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>4×4 Array&#123;Float64,2&#125;:   0.000165437  -4.63046e-5   -2.74736e-5   -2.49488e-5   -4.63046e-5    0.000220777   1.74278e-5    1.04227e-5   -2.74736e-5    1.74278e-5    0.000153325  -1.46654e-5   -2.49488e-5    1.04227e-5   -1.46654e-5    0.000160964</p>
+<pre><code>
+
+</code></pre>
+<p>&#123;.julia&#125;</p>
+<p>opteff &#61; optimize&#40;λ -&gt; gmmObjsubvec&#40;λ, β-&gt;gi<em>ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi</em>ivshare&#40;θ1,y,x,z&#41;&#41;&#41;,Ind,α&#41;,                   ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41; @show βeff &#61; opteff.minimizer</p>
+<pre><code>
+
+~~~~
+βeff &#61; opteff.minimizer &#61; &#91;0.9495626237768728, 1.0091148203086404&#93;
+~~~~
+
+
+
+~~~~&#123;.julia&#125;
+θeff &#61; ordering&#40;βeff,Ind,α&#41;
+display&#40;gmmVar&#40;θeff,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi_ivshare&#40;θ1,y,x,z&#41;&#41;&#41;&#41;&#41;</code></pre>
+<pre><code>4×4 Array&#123;Float64,2&#125;:
+  0.000168736  -5.53844e-5   -2.88925e-5   -2.71369e-5 
+ -5.53844e-5    0.000223751   1.94269e-5    1.42662e-5 
+ -2.88925e-5    1.94269e-5    0.000153824  -1.46876e-5 
+ -2.71369e-5    1.42662e-5   -1.46876e-5    0.000164918</code></pre>
+<pre><code class="language-&#123;.julia&#125;">
+
+ar_ivshare &#61; θ-&gt;ar&#40;θ,β-&gt;gi_ivshare&#40;β,y,x,z&#41;,Ind,α&#41;
+optcue &#61; optimize&#40;ar_ivshare,
+                  ψ, BFGS&#40;&#41;, autodiff &#61;:forward&#41;
+@show βcue &#61; optcue.minimizer
+~~~~~~~~~~~~~
+
+</code></pre>
+<p>βcue &#61; optcue.minimizer &#61; &#91;-1.0434536614555502e14, -7.372172004947444e13&#93;</p>
+<pre><code>
+
+</code></pre>
+<p>&#123;.julia&#125; θcue &#61; ordering&#40;βcue,Ind,α&#41; Vcue &#61; gmmVar&#40;θcue,β-&gt;gi<em>ivshare&#40;β,y,x,z&#41;,inv&#40;cov&#40;gi</em>ivshare&#40;θcue,y,x,z&#41;&#41;&#41;&#41; display&#40;Vcue&#41;</p>
+<pre><code>
+
+~~~~
+4×4 Array&#123;Float64,2&#125;:
+  6.31947e25  -1.10467e24  -6.89365e23   1.88354e25
+ -1.10467e24   3.04506e25   1.75767e23   3.37846e24
+ -6.89365e23   1.75767e23   3.71989e25  -2.12417e24
+  1.88354e25   3.37846e24  -2.12417e24   4.71567e25
+~~~~
+
+
+
+~~~~&#123;.julia&#125;
+plot_cr&#40;βcue, θcue,Vcue, ar_ivshare, Ind, α&#41;</code></pre>
+<p><img src="figures/Problem Set 7 -  Alejandro Rojas &#40;1&#41;_16_1.png" alt="" />\ </p>
+<p>An inadequate constraint for <span class="math">$\alpha_0$</span> implies that the estimated parameters are not longer unbiased. This is a property of every constrained estimation. </p>
+
+
+
+          <HR/>
+          <div class="footer"><p>
+          Published from <a href="Problem Set 7 -  Alejandro Rojas (1).md">Problem Set 7 -  Alejandro Rojas (1).md</a> using
+          <a href="http://github.com/mpastell/Weave.jl">Weave.jl</a>
+           on 2019-12-05.
+          <p></div>
+
+
+        </div>
+      </div>
+    </div>
+  </BODY>
+</HTML>

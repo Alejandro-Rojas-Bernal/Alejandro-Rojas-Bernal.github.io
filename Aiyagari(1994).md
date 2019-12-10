@@ -2,6 +2,8 @@
 
 # Replication made by Alejandro Rojas-Bernal. Commentaries or suggestions to `alejandro.rojas@alumni.ubc.ca`
 
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
 ## __1. The model__
 
 ### __1.1 Consumer Problem__ 

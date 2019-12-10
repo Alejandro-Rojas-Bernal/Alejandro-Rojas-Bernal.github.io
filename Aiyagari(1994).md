@@ -12,7 +12,7 @@ subject to
 $$c_t + a_{t+1} = w y_t + (1 + r) a_t$$
 $$c_t \ge 0$$
 $$ a_t > - b $$
-where $b$ (if positive) is the limit on borrowing and $y_t$ is assumed to be iid with bounded support given by $\left[y_{min}, y_{max}\right]$ with $y_{min} > 0$.
+where <img src="https://render.githubusercontent.com/render/math?math=b"> (if positive) is the limit on borrowing and $y_t$ is assumed to be iid with bounded support given by $\left[y_{min}, y_{max}\right]$ with $y_{min} > 0$.
 
 If $r<0$ we need to impose a borrowing constraint in order to have a solution. Otherwise, if $r>\ge 0$ a less restrictive constraint is to impose present value budget valance, i.e. $lim_{t \rightarrow \infty} \frac{a_t}{\left(1+r\right)^t} \ge 0 \, (a.s.)$. The nonnegativity of consumption imposes the natural borrowing constraint $a_t \ge -\frac{w y_{min}}{r}$. If $b>\frac{w y_{min}}{r}$ the borrowing limit $b$ will neve be binding. Therefore we can replace the borrowing constraint for:
 $$a_t \ge -\varphi$$

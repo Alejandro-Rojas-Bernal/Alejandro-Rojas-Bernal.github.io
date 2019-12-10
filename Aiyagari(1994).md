@@ -2,7 +2,6 @@
 
 # Replication made by Alejandro Rojas-Bernal. Commentaries or suggestions to `alejandro.rojas@alumni.ubc.ca`
 
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 
 ## __1. The model__
 
@@ -13,33 +12,33 @@ $$E_0\left\{\sum_{t=0}^{\infty}\beta^t U(C_t)\right\}$$
 subject to 
 $$c_t + a_{t+1} = w y_t + (1 + r) a_t$$
 $$c_t \ge 0$$
-$$ a_t > - b $$
+$">a_t > - b <img src="https://render.githubusercontent.com/render/math?math=$
 where <img src="https://render.githubusercontent.com/render/math?math=b"> (if positive) is the limit on borrowing and <img src="https://render.githubusercontent.com/render/math?math=y_t"> is assumed to be iid with bounded support given by <img src="https://render.githubusercontent.com/render/math?math=\left[y_{min}, y_{max}\right]"> with <img src="https://render.githubusercontent.com/render/math?math=y_{min} > 0">.
 
-If $r<0$ we need to impose a borrowing constraint in order to have a solution. Otherwise, if $r>\ge 0$ a less restrictive constraint is to impose present value budget valance, i.e. $lim_{t \rightarrow \infty} \frac{a_t}{\left(1+r\right)^t} \ge 0 \, (a.s.)$. The nonnegativity of consumption imposes the natural borrowing constraint $a_t \ge -\frac{w y_{min}}{r}$. If $b>\frac{w y_{min}}{r}$ the borrowing limit $b$ will neve be binding. Therefore we can replace the borrowing constraint for:
+If <img src="https://render.githubusercontent.com/render/math?math=r<0">we need to impose a borrowing constraint in order to have a solution. Otherwise, if <img src="https://render.githubusercontent.com/render/math?math=r>\ge 0">a less restrictive constraint is to impose present value budget valance, i.e. <img src="https://render.githubusercontent.com/render/math?math=lim_{t \rightarrow \infty} \frac{a_t}{\left(1+r\right)^t} \ge 0 \, (a.s.)$. The nonnegativity of consumption imposes the natural borrowing constraint <img src="https://render.githubusercontent.com/render/math?math=a_t \ge -\frac{w y_{min}}{r}$. If <img src="https://render.githubusercontent.com/render/math?math=b>\frac{w y_{min}}{r}">the borrowing limit <img src="https://render.githubusercontent.com/render/math?math=b">will neve be binding. Therefore we can replace the borrowing constraint for:
 $$a_t \ge -\varphi$$
 $$\varphi \equiv min\left\{b, \frac{w y_{min}}{r}\right\}, \text{  for  }r>0; \text{  }\varphi\equiv b, \text{  for  } r\leq 0.$$
 
-Let $V\left(a_t,y_t\vert b,w,r\right)$ be the optimal value function for the agent with savings $a_t$ and productivity endowment $y_t$. The function is the unique solution to the Bellman equation:
+Let <img src="https://render.githubusercontent.com/render/math?math=V\left(a_t,y_t\vert b,w,r\right)">be the optimal value function for the agent with savings <img src="https://render.githubusercontent.com/render/math?math=a_t">and productivity endowment <img src="https://render.githubusercontent.com/render/math?math=y_t$. The function is the unique solution to the Bellman equation:
 $$V\left(a_t,y_t\vert b,w,r\right) \equiv Max\left\{U\left(w y_t + (1 + r) a_t - a_{t+1}\right)+\beta \int  V\left(a_{t+1},y_{t+1}\vert b,w,r\right)dF\left(y_{t+1}\right)\right\}$$
 
-In the steady state there is going to be a distribution of asset holdings given by $G\left(a\right)$ such that $E[a]=\int a dG(a)$.
+In the steady state there is going to be a distribution of asset holdings given by <img src="https://render.githubusercontent.com/render/math?math=G\left(a\right)">such that <img src="https://render.githubusercontent.com/render/math?math=E[a]=\int a dG(a)$.
 
 ### __1.2 Producer Problem__
 
-Let $F\left(k,1\right)$ denote per capita output and $\delta$ be the depreciation rate. The producer profit maximization under steady state is given by $r = f_k\left(k,1\right)-\delta$ and $w(r)=f_L\left(k,1\right)$. $r = f_k\left(k,1\right)-\delta$ is an implicit function for the steady state demand of capital $K(r)$.
+Let <img src="https://render.githubusercontent.com/render/math?math=F\left(k,1\right)">denote per capita output and <img src="https://render.githubusercontent.com/render/math?math=\delta">be the depreciation rate. The producer profit maximization under steady state is given by <img src="https://render.githubusercontent.com/render/math?math=r = f_k\left(k,1\right)-\delta">and <img src="https://render.githubusercontent.com/render/math?math=w(r)=f_L\left(k,1\right)$. <img src="https://render.githubusercontent.com/render/math?math=r = f_k\left(k,1\right)-\delta">is an implicit function for the steady state demand of capital <img src="https://render.githubusercontent.com/render/math?math=K(r)$.
 
 ### __1.3 Stationary Equilibrium__
 
-Under the stationary distribution we have that the equilibrium is given by $K(r)=E[a]$.
+Under the stationary distribution we have that the equilibrium is given by <img src="https://render.githubusercontent.com/render/math?math=K(r)=E[a]$.
 
 ## __2. Model Specification and Parameterization.__
 
-Aiyagari uses $U(c)=\frac{c^{1-\sigma}}{1-\sigma}$ with $\sigma \in \left\{1, 3, 5\right\}$. The borrowing constraint $b=0$. The labor endowment shock is given by a Markov chain specification with seven states that matches the following AR(1) representation for the logarithm of the labor endowment shock:
+Aiyagari uses <img src="https://render.githubusercontent.com/render/math?math=U(c)=\frac{c^{1-\sigma}}{1-\sigma}">with <img src="https://render.githubusercontent.com/render/math?math=\sigma \in \left\{1, 3, 5\right\}$. The borrowing constraint <img src="https://render.githubusercontent.com/render/math?math=b=0$. The labor endowment shock is given by a Markov chain specification with seven states that matches the following AR(1) representation for the logarithm of the labor endowment shock:
 $$log\left(y_t\right)=\lambda \log\left(y_{t-1}\right) + \sigma_{\epsilon}\left(1-\lambda^2\right)^{1/2} \epsilon_t, \text{  where   }\epsilon_t \sim Normal(0,1)$$
-$\sigma_{\epsilon} \in \left\{0.2, 0.4\right\}$ and $\rho \in \left\{0, 0.3, 0.6, 0.9\right\}$. The Markov Chain is defined using Tauchen(1986). 
+$\sigma_{\epsilon} \in \left\{0.2, 0.4\right\}">and <img src="https://render.githubusercontent.com/render/math?math=\rho \in \left\{0, 0.3, 0.6, 0.9\right\}$. The Markov Chain is defined using Tauchen(1986). 
 
-For the producer $F\left(K,L\right)=K^\alpha L^{1-\alpha}$ with $\alpha = 0.36$ and $\delta = 8\%$.
+For the producer <img src="https://render.githubusercontent.com/render/math?math=F\left(K,L\right)=K^\alpha L^{1-\alpha}">with <img src="https://render.githubusercontent.com/render/math?math=\alpha = 0.36">and <img src="https://render.githubusercontent.com/render/math?math=\delta = 8\%$.
 
 
 ```julia
@@ -96,13 +95,13 @@ using LinearAlgebra, Statistics, Distributions, Expectations, NLsolve, Roots, Ra
 
 ### __3.2 Tauchen Method function__
 
-Given a $\lambda$, $\sigma_\epsilon$ and a number of markov states the following function produces a vector $Y$ with the log productivity endowment and a matrix $M$ with the markov process.
+Given a <img src="https://render.githubusercontent.com/render/math?math=\lambda$, <img src="https://render.githubusercontent.com/render/math?math=\sigma_\epsilon">and a number of markov states the following function produces a vector <img src="https://render.githubusercontent.com/render/math?math=Y">with the log productivity endowment and a matrix <img src="https://render.githubusercontent.com/render/math?math=M">with the markov process.
 
 __Steps__
 
-1. Define $\sigma_y = \left(\frac{\sigma_\epsilon^2}{1-\lambda^2}\right)$
-2. Establish the max and the min values $y_N = m \times \sigma_y$ and $y_1 = -Y_N$ (following Tauchen(1986) $m=3$).
-3. Define $P\left(y_1 \lvert y_j\right) = \Phi\left(\frac{y_1 -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, $P\left(y_N \lvert y_j\right) = 1-\Phi\left(\frac{y_N -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, and $P\left(y_k \lvert y_j\right) = \Phi\left(\frac{y_k -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right) -  \Phi\left(\frac{y_k -\lambda y_j - \frac{w}{2}}{\sigma_\epsilon}\right)$.
+1. Define <img src="https://render.githubusercontent.com/render/math?math=\sigma_y = \left(\frac{\sigma_\epsilon^2}{1-\lambda^2}\right)$
+2. Establish the max and the min values <img src="https://render.githubusercontent.com/render/math?math=y_N = m \times \sigma_y">and <img src="https://render.githubusercontent.com/render/math?math=y_1 = -Y_N">(following Tauchen(1986) <img src="https://render.githubusercontent.com/render/math?math=m=3$).
+3. Define <img src="https://render.githubusercontent.com/render/math?math=P\left(y_1 \lvert y_j\right) = \Phi\left(\frac{y_1 -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, <img src="https://render.githubusercontent.com/render/math?math=P\left(y_N \lvert y_j\right) = 1-\Phi\left(\frac{y_N -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, and <img src="https://render.githubusercontent.com/render/math?math=P\left(y_k \lvert y_j\right) = \Phi\left(\frac{y_k -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right) -  \Phi\left(\frac{y_k -\lambda y_j - \frac{w}{2}}{\sigma_\epsilon}\right)$.
 
 
 ```julia
@@ -142,7 +141,7 @@ end
 
 
 
-For example with $\lambda = 0.5$, $\sigma_\epsilon=1$, and $N=5$ we obtain:
+For example with <img src="https://render.githubusercontent.com/render/math?math=\lambda = 0.5$, <img src="https://render.githubusercontent.com/render/math?math=\sigma_\epsilon=1$, and <img src="https://render.githubusercontent.com/render/math?math=N=5">we obtain:
 
 The log productivity process:
 
@@ -198,17 +197,17 @@ We are going to define the function `KpolicyAiyagari(u,du,k,θ)` with inputs:
 
 __Steps for Value Function Iteration__
 
-1. Extract the Tauchen Markov discretization with values $l \in \left\{exp(Y_n)\right\}_{n=1}^{N}$ and markov transition matrix $W$.
-2. We calculate $r = f_k\left(k,1,\alpha\right)-\delta$ and  $w = f_L\left(k,1,\alpha\right)$.
-3. We use Maliar, Maliar, Valli (2009) algorithm for building a grid for $a_t$ with more intervals in the lower values of $a_t$ with the equation $A = \left\{a_j =\left(\frac{j}{J}\right)^\rho a_{max}\right\}$ where $J$ stands for grid size and we follow them in using $\rho = 7$.
+1. Extract the Tauchen Markov discretization with values <img src="https://render.githubusercontent.com/render/math?math=l \in \left\{exp(Y_n)\right\}_{n=1}^{N}">and markov transition matrix <img src="https://render.githubusercontent.com/render/math?math=W$.
+2. We calculate <img src="https://render.githubusercontent.com/render/math?math=r = f_k\left(k,1,\alpha\right)-\delta">and  <img src="https://render.githubusercontent.com/render/math?math=w = f_L\left(k,1,\alpha\right)$.
+3. We use Maliar, Maliar, Valli (2009) algorithm for building a grid for <img src="https://render.githubusercontent.com/render/math?math=a_t">with more intervals in the lower values of <img src="https://render.githubusercontent.com/render/math?math=a_t">with the equation <img src="https://render.githubusercontent.com/render/math?math=A = \left\{a_j =\left(\frac{j}{J}\right)^\rho a_{max}\right\}">where <img src="https://render.githubusercontent.com/render/math?math=J">stands for grid size and we follow them in using <img src="https://render.githubusercontent.com/render/math?math=\rho = 7$.
 4. We iterate the value function:
 $$V^{N+1}\left(a_j,y_i\vert b,w,r\right) \equiv Max_{a_{t+1} \in A}\left\{U\left(w y_i + (1 + r) a_{j} - a_{t+1}\right)+\beta \sum_{n=1}^{N}  V^{N}\left(a_{t+1},y_{n}\vert b,w,r\right)Prob\left\{y_n\lvert y_i\right\}\right\}$$
-5. We iterate step 4 until the value function until $sup\lvert V^{N+1}-V^N \lvert<1E^{-10}$
+5. We iterate step 4 until the value function until <img src="https://render.githubusercontent.com/render/math?math=sup\lvert V^{N+1}-V^N \lvert<1E^{-10}$
 
 
 *The algorithm is inefficient in the sense that there are loops that can be eliminated but are keep for the sole purpose of clarity*
 
-*There are several controls inside the function: i) positive consumption is possible under worst possible state; ii) $r < (1-\beta)/\beta$; and iii) monotonic policy function *
+*There are several controls inside the function: i) positive consumption is possible under worst possible state; ii) <img src="https://render.githubusercontent.com/render/math?math=r < (1-\beta)/\beta$; and iii) monotonic policy function *
 
 
 ```julia
@@ -257,7 +256,7 @@ function KpolicyAiyagari(u, du, k, θ; tol = 1E-10, max_iter = 10000, adj = 7, m
     Ind = Ind1;
     V = V1;
     elapsed = time() - start
-    println("      Kpolicy Aiyagari solved in $iter iterations, with a sup metric of $sup and in $elapsed seconds")
+    println("      Kpolicy Aiyagari solved in <img src="https://render.githubusercontent.com/render/math?math=iter iterations, with a sup metric of <img src="https://render.githubusercontent.com/render/math?math=sup and in <img src="https://render.githubusercontent.com/render/math?math=elapsed seconds")
     return sol = [A_prime, a_grid, Ind, V, Y, W]
 end
 ```
@@ -328,8 +327,8 @@ plot(collect(1:1:size(VFI[2])[1]),VFI[2], title ="Capital Grid",xlabel="Position
 
 Using the results from `KpolicyAiyagari` we follow the following algorithm:
 
-1. Randomly assign an initial combination of state variables $\left\{y_i,a_i\right\}_{i=1}^{pop}$ to each of the pop households. In our simulations we are going to use $pop = 10000$. From this initial assignment we define an initial probability mass function for the state combination $f_0\left(y_i,a_i\right)$.
-2. Now we iterate with idiosyncratic shocks at least 100 times until $sup\lvert E_{n+1}\left[a\right]-E_{n}\left[a\right], Var_{n+1}\left[a\right]-Var_{n}\left[a\right], Skw_{n+1}\left[a\right]-Skw_{n}\left[a\right] \lvert< 1E^{-6}$.
+1. Randomly assign an initial combination of state variables <img src="https://render.githubusercontent.com/render/math?math=\left\{y_i,a_i\right\}_{i=1}^{pop}">to each of the pop households. In our simulations we are going to use <img src="https://render.githubusercontent.com/render/math?math=pop = 10000$. From this initial assignment we define an initial probability mass function for the state combination <img src="https://render.githubusercontent.com/render/math?math=f_0\left(y_i,a_i\right)$.
+2. Now we iterate with idiosyncratic shocks at least 100 times until <img src="https://render.githubusercontent.com/render/math?math=sup\lvert E_{n+1}\left[a\right]-E_{n}\left[a\right], Var_{n+1}\left[a\right]-Var_{n}\left[a\right], Skw_{n+1}\left[a\right]-Skw_{n}\left[a\right] \lvert< 1E^{-6}$.
 
 
 ```julia
@@ -423,7 +422,7 @@ function KlevelAiyagari(u, du, k, θ, pop; tol = 1E-6, max_iter = 10000, min_ite
     KS = μ1;
     Yfin = Y1;
     elapsed = time() - start
-    println("      Klevel Aiyagari solved in $iter iterations, with a sup metric of $sup and in $elapsed seconds")
+    println("      Klevel Aiyagari solved in <img src="https://render.githubusercontent.com/render/math?math=iter iterations, with a sup metric of <img src="https://render.githubusercontent.com/render/math?math=sup and in <img src="https://render.githubusercontent.com/render/math?math=elapsed seconds")
     return sol = [KS, r, f, a_sup, new_a_grid, new_A_prime, new_V, Y, W, Afin, Yfin]
 end
 ```
@@ -465,7 +464,7 @@ plot(KS[5], [sum(KS[3][:,1:s]) for s in 1: size(KS[5])[1]])
 
 ```julia
 a = sum(KS[3][:,1]) * 100
-println("The probability mass function show us that $a% of the households are hand-to-mouth consumers at the borrowing constraint")
+println("The probability mass function show us that <img src="https://render.githubusercontent.com/render/math?math=a% of the households are hand-to-mouth consumers at the borrowing constraint")
 ```
 
     The probability mass function show us that 9.23% of the households are hand-to-mouth consumers at the borrowing constraint
@@ -528,7 +527,7 @@ Again, as productivity increases the probability of being a hand-to-mouth consum
 
 #### __3.4.5 Supply and Demand in Bewley models__
 
-Let's look at the behaviour of the demand and supply function under $\sigma =5$, $\lambda = 0.6$, and $\sigma_\epsilon=0.2$
+Let's look at the behaviour of the demand and supply function under <img src="https://render.githubusercontent.com/render/math?math=\sigma =5$, <img src="https://render.githubusercontent.com/render/math?math=\lambda = 0.6$, and <img src="https://render.githubusercontent.com/render/math?math=\sigma_\epsilon=0.2$
 
 
 ```julia
@@ -712,10 +711,10 @@ plot([Supply1 Demand1], r_range)
 
 __Steps for Convergence to Equilibrium__
 
-1. We start with an interest rate $r_1=\frac{1-\beta}{\beta}-\epsilon$ and find the demand for capital $K(r_1)$.
-2. We evaluate $KlevelAiyagari(u, du, Kr(r_1, δ, α), θ, pop)$ and obtain the supply of capital $A(r_1)$, with this we establish the interest rate $r_2=Min\left\{f_K\left(A(r_1),1,\alpha\right)-\delta, \frac{1-\beta}{\beta}\right\}$. By definition $r_1$ and $r_2$ are at opposite sides of the equilibrium. Without loss of generality less assume $r_1>r_2$.
-3. We define $r =\frac{r_1+r_2}{2}$ and run $KlevelAiyagari(u, du, Kr(r_1, δ, α), θ, pop)$ in order to find $A(r)$. If $A(r)> K(r)$ we replace $r_1 =r$, if $A(r) < K(r)$ we replace $r_2 =r$.
-4. If $\lvert A(r) - K(r)\lvert<0.01$ or if $\lvert r_1 -r_2 \lvert < 1E^{-4}$ we declare $(A(r), r)$ as the equilibrium. Otherwise repeat 3. 
+1. We start with an interest rate <img src="https://render.githubusercontent.com/render/math?math=r_1=\frac{1-\beta}{\beta}-\epsilon">and find the demand for capital <img src="https://render.githubusercontent.com/render/math?math=K(r_1)$.
+2. We evaluate <img src="https://render.githubusercontent.com/render/math?math=KlevelAiyagari(u, du, Kr(r_1, δ, α), θ, pop)">and obtain the supply of capital <img src="https://render.githubusercontent.com/render/math?math=A(r_1)$, with this we establish the interest rate <img src="https://render.githubusercontent.com/render/math?math=r_2=Min\left\{f_K\left(A(r_1),1,\alpha\right)-\delta, \frac{1-\beta}{\beta}\right\}$. By definition <img src="https://render.githubusercontent.com/render/math?math=r_1">and <img src="https://render.githubusercontent.com/render/math?math=r_2">are at opposite sides of the equilibrium. Without loss of generality less assume <img src="https://render.githubusercontent.com/render/math?math=r_1>r_2$.
+3. We define <img src="https://render.githubusercontent.com/render/math?math=r =\frac{r_1+r_2}{2}">and run <img src="https://render.githubusercontent.com/render/math?math=KlevelAiyagari(u, du, Kr(r_1, δ, α), θ, pop)">in order to find <img src="https://render.githubusercontent.com/render/math?math=A(r)$. If <img src="https://render.githubusercontent.com/render/math?math=A(r)> K(r)">we replace <img src="https://render.githubusercontent.com/render/math?math=r_1 =r$, if <img src="https://render.githubusercontent.com/render/math?math=A(r) < K(r)">we replace <img src="https://render.githubusercontent.com/render/math?math=r_2 =r$.
+4. If <img src="https://render.githubusercontent.com/render/math?math=\lvert A(r) - K(r)\lvert<0.01">or if <img src="https://render.githubusercontent.com/render/math?math=\lvert r_1 -r_2 \lvert < 1E^{-4}">we declare <img src="https://render.githubusercontent.com/render/math?math=(A(r), r)">as the equilibrium. Otherwise repeat 3. 
 
 
 ```julia
@@ -736,7 +735,7 @@ function EquilibriumAiyagari(u, du, θ; tol = 0.01, max_iter = 100)
     r_path = [r1];
     w_path = [w1];
     iter  = 0;
-    println("In iteration $iter we have (K0, r0, w0) = ($K1, $r1, $w1).")
+    println("In iteration <img src="https://render.githubusercontent.com/render/math?math=iter we have (K0, r0, w0) = ($K1, <img src="https://render.githubusercontent.com/render/math?math=r1, <img src="https://render.githubusercontent.com/render/math?math=w1).")
     # Extract elements from the KlevelAiyagari algorithm
     K2 = KlevelAiyagari(u, du, Kr(r1, θ[10], θ[9]), θ, pop)[1];
     r2 = min(fK(K2, 1, α) - δ, (1-β)/β);
@@ -749,7 +748,7 @@ function EquilibriumAiyagari(u, du, θ; tol = 0.01, max_iter = 100)
     K = K2;
     w = w2;
     sup = Inf;
-    println("In iteration $iter we have (K, r1, r2, w, sup) = ($K, $r1, $r2, $w, $sup).")
+    println("In iteration <img src="https://render.githubusercontent.com/render/math?math=iter we have (K, r1, r2, w, sup) = ($K, <img src="https://render.githubusercontent.com/render/math?math=r1, <img src="https://render.githubusercontent.com/render/math?math=r2, <img src="https://render.githubusercontent.com/render/math?math=w, <img src="https://render.githubusercontent.com/render/math?math=sup).")
     while (isnan(K) == 1) | (sup > tol && iter ≤ max_iter)
         iter += 1;
         r = (r1 + r2) /2;
@@ -776,7 +775,7 @@ function EquilibriumAiyagari(u, du, θ; tol = 0.01, max_iter = 100)
         K_path = [K_path; K];
         r_path = [r_path; r];
         w_path = [w_path; w];
-        println("In iteration $iter we have (K, r1, r2, w, sup) = ($K, $r1, $r2, $w, $sup).")
+        println("In iteration <img src="https://render.githubusercontent.com/render/math?math=iter we have (K, r1, r2, w, sup) = ($K, <img src="https://render.githubusercontent.com/render/math?math=r1, <img src="https://render.githubusercontent.com/render/math?math=r2, <img src="https://render.githubusercontent.com/render/math?math=w, <img src="https://render.githubusercontent.com/render/math?math=sup).")
         if (sup ≤ tol) | (abs(r1-r2) < 1E-4)
             f = KlevelAiyagari_sol[3];
             a_sup = KlevelAiyagari_sol[4];
@@ -807,7 +806,7 @@ function EquilibriumAiyagari(u, du, θ; tol = 0.01, max_iter = 100)
     W = W;
     savings = δ*α  / (r + δ);
     elapsed = time() - start
-    println("Equilibrium found in $elapsed seconds")
+    println("Equilibrium found in <img src="https://render.githubusercontent.com/render/math?math=elapsed seconds")
     return sol = K_end, r_end, w_end, savings, f, a_sup, a_grid, A_prime, V, Y, K, K_path, r_path, w_path, Afin, Yfin
 end
 ```
@@ -898,7 +897,7 @@ E = EquilibriumAiyagari(u, du, θ)
 
 
 
-We can see the way in which the algorithm converges to the equilibrium valu of $K$ and $r$
+We can see the way in which the algorithm converges to the equilibrium valu of <img src="https://render.githubusercontent.com/render/math?math=K">and <img src="https://render.githubusercontent.com/render/math?math=r$
 
 
 ```julia
@@ -2424,8 +2423,8 @@ TABLEB = [(BE11[4],BE11[2],BE11[1]) (BE12[4],BE12[2],BE12[1]) (BE13[4],BE13[2],B
 
 In the following graphs we see the values from our estimation for Table II.A and II.B of Aiyagari in the following order: savings, interest rate, capital
 
-- As the persistency in the shock increases (an increase in $\lambda$) there is a higher level of savings in the economy, a higher level of capital and a lower interest rate.
-- As the risk aversion coefficient $\mu$ increases we have more savings, a higher level of capital and lower interest rates.
+- As the persistency in the shock increases (an increase in <img src="https://render.githubusercontent.com/render/math?math=\lambda$) there is a higher level of savings in the economy, a higher level of capital and a lower interest rate.
+- As the risk aversion coefficient <img src="https://render.githubusercontent.com/render/math?math=\mu">increases we have more savings, a higher level of capital and lower interest rates.
 - As the variance of income shock increases there is an increase in the level of savings, the stationary level of capital, and a reduction in the level of interest rates.
 
 
@@ -2546,7 +2545,7 @@ In the following graphs we see the values from our estimation for Table II.A and
 
 The values do not match properly Aiyagari's estimation. 
 
-As the risk aversion parameter $\sigma$ increases see that there is a lowe concentration of agents at the borrowing constraint. Agents accumulate more assets. 
+As the risk aversion parameter <img src="https://render.githubusercontent.com/render/math?math=\sigma">increases see that there is a lowe concentration of agents at the borrowing constraint. Agents accumulate more assets. 
 
 
 ```julia

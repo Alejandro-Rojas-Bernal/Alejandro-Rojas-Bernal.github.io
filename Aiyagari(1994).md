@@ -7,6 +7,8 @@
 ### __1.1 Consumer Problem__ 
 
 The individual problem is to maximize
+
+<img src="https://render.githubusercontent.com/render/math?math=E_0\left\{\sum_{t=0}^{\infty}\beta^t U(C_t)\right\}">
 $$E_0\left\{\sum_{t=0}^{\infty}\beta^t U(C_t)\right\}$$
 subject to 
 $$c_t + a_{t+1} = w y_t + (1 + r) a_t$$

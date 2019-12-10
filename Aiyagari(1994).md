@@ -1,3 +1,10 @@
+<script src="//yihui.org/js/math-code.js"></script>
+<!-- Just one possible MathJax CDN below. You may use others. -->
+<script async
+  src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
 # __Aiyagari - Uninsured Idiosyncratic Risk and Aggregate Saving - The Quarterly Journal of Economic - (1994)__
 
 # Replication made by Alejandro Rojas-Bernal. Commentaries or suggestions to `alejandro.rojas@alumni.ubc.ca`

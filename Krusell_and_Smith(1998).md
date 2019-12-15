@@ -434,7 +434,7 @@ plot(VFI[2],[VFI[1][:,15,1,1] VFI[1][:,15,2,1]], title ="Policy Function",xlabel
 
 
 
-![svg](output_33_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_33_0.svg)
 
 
 
@@ -448,7 +448,7 @@ plot(VFI[2],[VFI[1][:,15,1,1] VFI[1][:,15,1,2]], title ="Policy Function",xlabel
 
 
 
-![svg](output_35_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_35_0.svg)
 
 
 
@@ -462,7 +462,7 @@ plot(VFI[2],[VFI[1][:,15,2,1] VFI[1][:,15,2,2]], title ="Policy Function",xlabel
 
 
 
-![svg](output_37_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_37_0.svg)
 
 
 
@@ -476,7 +476,7 @@ plot(VFI[3],[VFI[1][73,:,1,1] VFI[1][73,:,2,1] VFI[1][73,:,1,2] VFI[1][73,:,2,2]
 
 
 
-![svg](output_39_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_39_0.svg)
 
 
 
@@ -493,7 +493,7 @@ plot(VFI[2],[VFI[5][:,15,1,1] VFI[5][:,15,2,1] VFI[5][:,15,1,2] VFI[5][:,15,2,2]
 
 
 
-![svg](output_44_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_44_0.svg)
 
 
 
@@ -509,7 +509,7 @@ plot(VFI[3],[VFI[5][73,:,1,1] VFI[5][73,:,2,1] VFI[5][73,:,1,2] VFI[5][73,:,2,2]
 
 
 
-![svg](output_46_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_46_0.svg)
 
 
 
@@ -987,7 +987,7 @@ plot!(1:size(E[16])[1], exp.(E[17]), label="Predicted")
 
 
 
-![svg](output_55_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_55_0.svg)
 
 
 
@@ -1000,7 +1000,7 @@ plot!(1:size(E[18])[1], exp.(E[19]), label="Predicted")
 
 
 
-![svg](output_56_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_56_0.svg)
 
 
 
@@ -1015,7 +1015,7 @@ plot!(ash(vec(E[21]); m =20), label="Bust"; hist = false)
 
 
 
-![svg](output_58_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_58_0.svg)
 
 
 
@@ -1028,7 +1028,7 @@ plot!(ash(vec(E[21][E[23] .== ϵg]); m=20),  label = "Employed Bust" ; hist = fa
 
 
 
-![svg](output_59_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_59_0.svg)
 
 
 
@@ -1041,7 +1041,7 @@ plot!(ash(vec(E[21][E[23] .== ϵb]); m=30),  label = "Unemployed Bust" ; hist = 
 
 
 
-![svg](output_60_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_60_0.svg)
 
 
 
@@ -1055,7 +1055,7 @@ plot!(E[10][1:grid_elements],[count((E[21] .<= E[10][s])) for s in 1:grid_elemen
 
 
 
-![svg](output_61_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_61_0.svg)
 
 
 
@@ -1069,4 +1069,4 @@ plot!(E[10][1:grid_elements],[count((E[21] .<= E[10][s])) for s in 1:grid_elemen
 
 
 
-![svg](output_62_0.svg)
+![svg](/Krusell_and_Smith(1998)_files/output_62_0.svg)

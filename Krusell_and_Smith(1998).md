@@ -2,7 +2,7 @@
 
 # Replication made by Alejandro Rojas-Bernal. Commentaries or suggestions to `alejandro.rojas@alumni.ubc.ca`
 
-Alejandro-Rojas-Bernal.github.io/Aiyagari(1994).md
+[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
 
 ## __1. The model__
 

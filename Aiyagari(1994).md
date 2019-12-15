@@ -284,7 +284,7 @@ plot(VFI[2],[VFI[3][s,:] for s in 1:N], title ="Value Function",xlabel="Capital 
 
 
 
-![svg](output_39_0.svg)
+![svg](/Aiyagari(1994)_files/output_39_0.svg)
 
 
 
@@ -298,7 +298,7 @@ plot(collect(1:1:size(VFI[2])[1]),VFI[2], title ="Capital Grid",xlabel="Position
 
 
 
-![svg](output_41_0.svg)
+![svg](/Aiyagari(1994)_files/output_41_0.svg)
 
 
 
@@ -439,7 +439,7 @@ plot(KS[5], [sum(KS[3][:,1:s]) for s in 1: size(KS[5])[1]])
 
 
 
-![svg](output_48_0.svg)
+![svg](/Aiyagari(1994)_files/output_48_0.svg)
 
 
 
@@ -464,7 +464,7 @@ plot(ash(vec(KS[10]); m =20); hist = false)
 
 
 
-![svg](output_52_0.svg)
+![svg](/Aiyagari(1994)_files/output_52_0.svg)
 
 
 
@@ -480,7 +480,7 @@ plot(KS[5],[sum(KS[3][p,1:s])/sum(KS[3][p,:]) for s in 1:size(KS[5])[1], p in 1:
 
 
 
-![svg](output_55_0.svg)
+![svg](/Aiyagari(1994)_files/output_55_0.svg)
 
 
 
@@ -501,7 +501,7 @@ plot!(ash(vec(KS[10][KS[11] .== KS[8][7]]); m=30),  label = "y7"  ; hist = false
 
 
 
-![svg](output_59_0.svg)
+![svg](/Aiyagari(1994)_files/output_59_0.svg)
 
 
 
@@ -534,7 +534,7 @@ plot([Supply1 Demand1], r_range)
 
 
 
-![svg](output_63_1.svg)
+![svg](/Aiyagari(1994)_files/output_63_1.svg)
 
 
 
@@ -731,7 +731,7 @@ plot(1:size(E[12])[1], E[12], title ="Convergence Path of K",xlabel="Algorithm i
 
 
 
-![svg](output_70_0.svg)
+![svg](/Aiyagari(1994)_files/output_70_0.svg)
 
 
 
@@ -743,7 +743,7 @@ plot(1:size(E[13])[1], E[13], title ="Convergence Path of r",xlabel="Algorithm i
 
 
 
-![svg](output_71_0.svg)
+![svg](/Aiyagari(1994)_files/output_71_0.svg)
 
 
 
@@ -943,7 +943,7 @@ plot!(AE43[7], [sum(AE43[5][:,1:s]) for s in 1: size(AE43[7])[1]], label="sigma 
 
 
 
-![svg](output_86_0.svg)
+![svg](/Aiyagari(1994)_files/output_86_0.svg)
 
 
 
@@ -960,7 +960,7 @@ plot!(ash(vec(AE42[15]); m =20); hist = false, label="lambda = 0.9",)
 
 
 
-![svg](output_88_0.svg)
+![svg](/Aiyagari(1994)_files/output_88_0.svg)
 
 
 
@@ -993,7 +993,7 @@ plot!(ash(vec(BE32[15]); m =20); hist = false, label="sigma_epsilon = 0.4",)
 
 
 
-![svg](output_91_0.svg)
+![svg](/Aiyagari(1994)_files/output_91_0.svg)
 
 
 
@@ -1006,4 +1006,4 @@ plot!(BE32[7], [sum(BE32[5][:,1:s]) for s in 1: size(BE32[7])[1]], label="sigma_
 
 
 
-![svg](output_92_0.svg)
+![svg](/Aiyagari(1994)_files/output_92_0.svg)

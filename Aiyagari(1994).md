@@ -85,13 +85,13 @@ using LinearAlgebra, Statistics, Distributions, Expectations, NLsolve, Roots, Ra
 
 ### __3.2 Tauchen Method function__
 
-Given a $\lambda$, $\sigma_\epsilon$ and a number of markov states the following function produces a vector $Y$ with the log productivity endowment and a matrix $M$ with the markov process.
+Given a <img src="https://tex.s2cms.ru/svg/%5Clambda" alt="\lambda" />, <img src="https://tex.s2cms.ru/svg/%5Csigma_%5Cepsilon" alt="\sigma_\epsilon" /> and a number of markov states the following function produces a vector <img src="https://tex.s2cms.ru/svg/Y" alt="Y" /> with the log productivity endowment and a matrix <img src="https://tex.s2cms.ru/svg/M" alt="M" /> with the markov process.
 
 __Steps__
 
-1. Define $\sigma_y = \left(\frac{\sigma_\epsilon^2}{1-\lambda^2}\right)$
-2. Establish the max and the min values $y_N = m \times \sigma_y$ and $y_1 = -Y_N$ (following Tauchen(1986) $m=3$).
-3. Define $P\left(y_1 \lvert y_j\right) = \Phi\left(\frac{y_1 -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, $P\left(y_N \lvert y_j\right) = 1-\Phi\left(\frac{y_N -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)$, and $P\left(y_k \lvert y_j\right) = \Phi\left(\frac{y_k -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right) -  \Phi\left(\frac{y_k -\lambda y_j - \frac{w}{2}}{\sigma_\epsilon}\right)$.
+1. Define <img src="https://tex.s2cms.ru/svg/%5Csigma_y%20%3D%20%5Cleft(%5Cfrac%7B%5Csigma_%5Cepsilon%5E2%7D%7B1-%5Clambda%5E2%7D%5Cright)" alt="\sigma_y = \left(\frac{\sigma_\epsilon^2}{1-\lambda^2}\right)" />
+2. Establish the max and the min values <img src="https://tex.s2cms.ru/svg/y_N%20%3D%20m%20%5Ctimes%20%5Csigma_y" alt="y_N = m \times \sigma_y" /> and <img src="https://tex.s2cms.ru/svg/y_1%20%3D%20-Y_N" alt="y_1 = -Y_N" /> (following Tauchen(1986) <img src="https://tex.s2cms.ru/svg/m%3D3" alt="m=3" />).
+3. Define <img src="https://tex.s2cms.ru/svg/P%5Cleft(y_1%20%5Clvert%20y_j%5Cright)%20%3D%20%5CPhi%5Cleft(%5Cfrac%7By_1%20-%5Clambda%20y_j%20%2B%20%5Cfrac%7Bw%7D%7B2%7D%7D%7B%5Csigma_%5Cepsilon%7D%5Cright)" alt="P\left(y_1 \lvert y_j\right) = \Phi\left(\frac{y_1 -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)" />, <img src="https://tex.s2cms.ru/svg/P%5Cleft(y_N%20%5Clvert%20y_j%5Cright)%20%3D%201-%5CPhi%5Cleft(%5Cfrac%7By_N%20-%5Clambda%20y_j%20%2B%20%5Cfrac%7Bw%7D%7B2%7D%7D%7B%5Csigma_%5Cepsilon%7D%5Cright)" alt="P\left(y_N \lvert y_j\right) = 1-\Phi\left(\frac{y_N -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right)" />, and <img src="https://tex.s2cms.ru/svg/P%5Cleft(y_k%20%5Clvert%20y_j%5Cright)%20%3D%20%5CPhi%5Cleft(%5Cfrac%7By_k%20-%5Clambda%20y_j%20%2B%20%5Cfrac%7Bw%7D%7B2%7D%7D%7B%5Csigma_%5Cepsilon%7D%5Cright)%20-%20%20%5CPhi%5Cleft(%5Cfrac%7By_k%20-%5Clambda%20y_j%20-%20%5Cfrac%7Bw%7D%7B2%7D%7D%7B%5Csigma_%5Cepsilon%7D%5Cright)" alt="P\left(y_k \lvert y_j\right) = \Phi\left(\frac{y_k -\lambda y_j + \frac{w}{2}}{\sigma_\epsilon}\right) -  \Phi\left(\frac{y_k -\lambda y_j - \frac{w}{2}}{\sigma_\epsilon}\right)" />.
 
 
 ```julia

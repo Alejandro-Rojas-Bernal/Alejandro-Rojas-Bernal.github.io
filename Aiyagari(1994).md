@@ -268,7 +268,7 @@ plot(VFI[2],[VFI[1][s,:] for s in 1:N], title ="Policy Function",xlabel="Capital
 
 
 
-![svg](Alejandro-Rojas-Bernal.github.io/Aiyagari(1994)_files/output_36_0.svg)
+![svg](/Aiyagari(1994)_files/output_36_0.svg)
 
 
 

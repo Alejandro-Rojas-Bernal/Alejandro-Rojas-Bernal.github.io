@@ -2,6 +2,8 @@
 
 # Replication made by Alejandro Rojas-Bernal. Commentaries or suggestions to `alejandro.rojas@alumni.ubc.ca`
 
+Alejandro-Rojas-Bernal.github.io/Aiyagari(1994).md
+
 ## __1. The model__
 
 ### __1.1 Producer Problem__
